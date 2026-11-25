@@ -1,0 +1,15 @@
+{
+  "tvLogos": {
+    "repo": "tv-logo/tv-logos",
+    "sha": "d32e347bb7c4c640dceec23957802ad9182f58a6"
+  },
+  "countries": {
+    "spain": {"code": "es", "suffix": "es"},
+    "argentina": {"code": "ar", "suffix": "ar"},
+    "mexico": {"code": "mx", "suffix": "mx"},
+    "chile": {"code": "cl", "suffix": "cl"},
+    "united-states": {"code": "us", "suffix": "us"},
+    "world-latin-america": {"code": "lat", "suffix": "lam"},
+    "international": {"code": "int", "suffix": "int"}
+  }
+}

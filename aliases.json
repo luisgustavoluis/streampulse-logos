@@ -1,0 +1,11 @@
+{
+  "spain/tve-1-es.png": ["La 1", "TVE 1", "TVE La 1"],
+  "spain/tve-2-es.png": ["La 2", "TVE 2", "TVE La 2"],
+  "spain/lasexta-es.png": ["La Sexta"],
+  "spain/atreseries-es.png": ["A3 Series", "Atres Series", "Antena 3 Series"],
+  "spain/movistar-plus-es.png": ["Movistar Plus+", "Movistar+", "M+"],
+  "mexico/imagen-television-mx.png": ["Imagen TV"],
+  "mexico/canal-once-mx.png": ["Once TV"],
+  "mexico/nueve-mx.png": ["Nu9ve", "Nueve"],
+  "united-states/cbs-logo-white-us.png": ["CBS"]
+}
