@@ -1,8 +1,8 @@
 # StreamPulse · logos de canales
 
 StreamPulse lee `logos.json` de este repositorio y da a cada canal de tus listas su logo **sin que tengas que
-cargarlo a mano**. Funciona con cualquier lista: el emparejamiento se hace por el nombre del canal (y por
-`tvg-id` cuando lo hay), siempre **exacto**: «ESPN» nunca toma el logo de «ESPN 2».
+cargarlo a mano**. Funciona con cualquier lista: el emparejamiento se hace por el nombre del canal, siempre
+**exacto**: «ESPN» nunca toma el logo de «ESPN 2».
 
 ## De dónde salen los logos
 
@@ -12,15 +12,31 @@ cargarlo a mano**. Funciona con cualquier lista: el emparejamiento se hace por e
 
 Países incluidos: `spain`, `argentina`, `mexico`, `chile`, `united-states`, `world-latin-america`, `international`.
 
-## Agregar un logo que falta (desde la web de GitHub, sin instalar nada)
+## Agregar un logo que falta (desde el navegador, sin instalar nada)
 
-1. Entrá en la carpeta del país, por ejemplo `logos/mexico/`, y pulsá **Add file › Upload files**.
-2. Subí un **PNG con transparencia** llamado como el canal, en minúsculas, con guiones y el sufijo del país:
+Abrí el enlace de subida del país (con tu sesión de GitHub iniciada) y arrastrá el PNG:
+
+| País | Subir aquí |
+|---|---|
+| España | https://github.com/luisgustavoluis/streampulse-logos/upload/main/logos/spain |
+| Argentina | https://github.com/luisgustavoluis/streampulse-logos/upload/main/logos/argentina |
+| México | https://github.com/luisgustavoluis/streampulse-logos/upload/main/logos/mexico |
+| Latinoamérica | https://github.com/luisgustavoluis/streampulse-logos/upload/main/logos/world-latin-america |
+| EE. UU. | https://github.com/luisgustavoluis/streampulse-logos/upload/main/logos/united-states |
+| Chile | https://github.com/luisgustavoluis/streampulse-logos/upload/main/logos/chile |
+| Internacional | https://github.com/luisgustavoluis/streampulse-logos/upload/main/logos/international |
+
+1. El PNG, **con transparencia**, se llama como el canal, en minúsculas, con guiones y el sufijo del país:
    `canal-catorce-mx.png`, `espn-2-ar.png`, `teledeporte-es.png`.
    Sufijos: `es`, `ar`, `mx`, `cl`, `us`, `lam` (Latinoamérica), `int` (internacional).
-3. **Commit**. En un minuto la acción *Regenerar logos.json* actualiza el índice solo.
+2. Abajo, **Commit changes**. En un minuto la acción *Regenerar logos.json* actualiza el índice sola.
+3. Abrí StreamPulse dos veces (la primera baja el índice nuevo; GitHub puede tardar hasta 5 minutos en servirlo).
 
-StreamPulse lo descarga al arrancar: la próxima vez que abras la app, el canal ya tiene su logo.
+(En la carpeta del país, el mismo menú está arriba a la derecha como **Add file › Upload files**; en pantallas
+estrechas queda dentro del botón **…**. La app móvil de GitHub no permite subir archivos: usá el navegador.)
+
+En la guía, StreamPulse pinta en blanco los logos de un solo color (negros, azul oscuro, rojos…) para que se vean
+sobre el fondo oscuro; los que tienen detalle blanco propio (DAZN, Telecinco, TV3) conservan sus colores.
 
 **Si un logo de tv-logos está mal**, subí el tuyo con el **mismo nombre de archivo** en la misma carpeta: el tuyo
 lo reemplaza.
