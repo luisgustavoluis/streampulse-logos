@@ -22,7 +22,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OWN_BASE = "https://raw.githubusercontent.com/luisgustavoluis/streampulse-logos/main/logos/"
-VARIANT = re.compile(r"-(hd|hz|uhd|4k)(?=-[a-z]+\.png$)")
+VARIANT = re.compile(r"-(hd|hz|uhd|4k)(?=-)")
 
 
 def tv_logos_files(repo, sha, countries):
@@ -87,10 +87,14 @@ def main():
     if unknown:
         sys.exit(f"aliases.json names logos that do not exist: {unknown}")
     logos = []
+    kept_variant = set()
     for rel in sorted(files):
         base = VARIANT.sub("", rel)
-        if base != rel and base in files and rel not in own and rel not in aliases:
-            continue
+        if base != rel and rel not in own and rel not in aliases:
+            # The family's plain logo wins; without one, its first variant (-hd before -hz) stands in for it.
+            if base in files or base in kept_variant:
+                continue
+            kept_variant.add(base)
         country = rel.split("/", 1)[0]
         names = names_for(rel, countries[country]["suffix"]) | {a.strip() for a in aliases.get(rel, []) if a.strip()}
         logos.append({"b": files[rel], "p": urllib.parse.quote(rel), "c": countries[country]["code"], "n": sorted(names)})
