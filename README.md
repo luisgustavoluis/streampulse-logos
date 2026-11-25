@@ -35,8 +35,8 @@ Abrí el enlace de subida del país (con tu sesión de GitHub iniciada) y arrast
 (En la carpeta del país, el mismo menú está arriba a la derecha como **Add file › Upload files**; en pantallas
 estrechas queda dentro del botón **…**. La app móvil de GitHub no permite subir archivos: usá el navegador.)
 
-En la guía, StreamPulse pinta en blanco los logos de un solo color (negros, azul oscuro, rojos…) para que se vean
-sobre el fondo oscuro; los que tienen detalle blanco propio (DAZN, Telecinco, TV3) conservan sus colores.
+En la guía, StreamPulse pinta en blanco solo los logos de HBO (el negro no se ve sobre el fondo oscuro); el resto
+se muestra tal cual lo subís. Si un logo tiene partes negras, subilo ya con esas partes en blanco.
 
 **Si un logo de tv-logos está mal**, subí el tuyo con el **mismo nombre de archivo** en la misma carpeta: el tuyo
 lo reemplaza.
