@@ -21,7 +21,16 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-OWN_BASE = "https://raw.githubusercontent.com/luisgustavoluis/streampulse-logos/main/logos/"
+OWN_REPO = "luisgustavoluis/streampulse-logos"
+
+
+def own_base():
+    """Your logos by commit, not by branch: replacing a PNG under the same name changes its URL, so the app (which
+    keeps every downloaded logo) fetches the new one. In the Action, GITHUB_SHA is the commit that has the files."""
+    import subprocess
+    sha = os.environ.get("GITHUB_SHA") or subprocess.run(
+        ["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True, check=True).stdout.strip()
+    return f"https://raw.githubusercontent.com/{OWN_REPO}/{sha}/logos/"
 VARIANT = re.compile(r"-(hd|hz|uhd|4k)(?=-)")
 
 
@@ -100,7 +109,7 @@ def main():
         logos.append({"b": files[rel], "p": urllib.parse.quote(rel), "c": countries[country]["code"], "n": sorted(names)})
     repo, sha = sources["tvLogos"]["repo"], sources["tvLogos"]["sha"]
     # A logo's URL is bases[b] + p: tv-logos pinned to a commit (0) or this repository (1).
-    bases = [f"https://raw.githubusercontent.com/{repo}/{sha}/countries/", OWN_BASE]
+    bases = [f"https://raw.githubusercontent.com/{repo}/{sha}/countries/", own_base()]
     index = {"version": 1, "bases": bases, "logos": logos}
     out = ROOT / "logos.json"
     out.write_text(json.dumps(index, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")

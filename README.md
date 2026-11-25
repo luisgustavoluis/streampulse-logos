@@ -8,7 +8,7 @@ cargarlo a mano**. Funciona con cualquier lista: el emparejamiento se hace por e
 
 1. **Los tuyos**, en `logos/<país>/`. Mandan sobre los demás.
 2. [tv-logo/tv-logos](https://github.com/tv-logo/tv-logos), fijado a un commit (`sources.json`), así sus URLs no
-   cambian nunca. Son PNG con transparencia.
+   cambian nunca. Son PNG con transparencia. Los tuyos se sirven por commit: si reemplazás uno, la app baja el nuevo.
 
 Países incluidos: `spain`, `argentina`, `mexico`, `chile`, `united-states`, `world-latin-america`, `international`.
 
