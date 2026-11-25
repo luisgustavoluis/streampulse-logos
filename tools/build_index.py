@@ -66,7 +66,10 @@ def names_for(rel, suffix):
     movistar = re.fullmatch(r"(.+) por movistar plus", words)
     if movistar:
         x = movistar.group(1)
-        forms = {f"movistar {x}", f"movistar plus {x}", f"m plus {x}", f"m {x}"}
+        xs = {x}
+        if x.startswith("laliga tv") and "hypermotion" not in x:   # "LaLiga TV 2 por M+" is listed as "Movistar LaLiga 2"
+            xs.add(re.sub(r"^laliga tv", "laliga", x))
+        forms = {f"{p} {v}" for v in xs for p in ("movistar", "movistar plus", "m plus", "m")}
         if not re.search(r"\d$", x):          # the first of a numbered family is often listed as "... 1"
             forms |= {f + " 1" for f in forms}
         names |= forms
