@@ -36,9 +36,12 @@
     "CBS"
   ],
   "spain/tdp-es.png": [
-    "Teledeporte",
     "TDP",
-    "TVE Teledeporte"
+    "TVE Teledeporte",
+    "Teledeporte",
+    "M+ Teledeporte",
+    "VO Teledeporte",
+    "GO Teledeporte"
   ],
   "spain/tv3-cat-es.png": [
     "TV3",
@@ -49,5 +52,23 @@
     "Max Avances",
     "GO Max Avances",
     "HBO Max Avances"
+  ],
+  "spain/clan-es.png": [
+    "Clan",
+    "Clan TVE",
+    "Clan TV",
+    "GO Clan TVE",
+    "VO Clan TVE",
+    "VO Clan TV",
+    "M+ Clan TVE"
+  ],
+  "spain/24h-es.png": [
+    "24h",
+    "24 Horas",
+    "Canal 24 Horas",
+    "TVE 24 Horas",
+    "GO 24 Horas",
+    "VO 24 Horas",
+    "M+ 24 Horas"
   ]
 }
